@@ -6,7 +6,7 @@ app.use(express.json());
 //Importar rutas
 const productos = require("./routes/products") 
 
-app.use('api',productos) 
+app.use('/api',productos) 
 
 module.exports = app
 
