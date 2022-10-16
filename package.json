@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Empresa de desarrolladores de softwares ",
   "main": "server.js",
+
+
   "scripts": {        
     "start": "node back/server.js",
     "dev":"SET NODE_ENV=DEVELOPMENT& nodemon back/server",
