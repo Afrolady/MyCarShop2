@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react'
 
 export const Home = () => {
-    return (
+    return (   
         <Fragment>  
+            <MetaData title="Explora el Mundo sin Limites"></MetaData>
             <h1 id="encabezado_productos">Ultimos Productos</h1>
 
             <section id="productos" className='container mt-5'>
