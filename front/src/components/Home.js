@@ -16,7 +16,7 @@ export const Home = () => {
                                 <h5 id="titulo_producto"><a href='http://localhost:3000'>Nutra Gold Holistic Gatos</a></h5>
                                 <div className='rating mt-auto'>
                                     <div className='rating-outer'>
-                                        <div className='rating-inner'></div>
+                                        <div className='rating-inner'></div>  
                                     </div>
                                     <span id="No_de_opiniones"> 5 reviews</span>
                                 </div>
