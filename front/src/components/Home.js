@@ -1,8 +1,31 @@
 import React, { Fragment } from 'react'
+import MetaData from './layout/MetaData'  
+import {useDispatch, useSelector} from 'react-redux'
+import { getProducts } from '../actions/productActions'
+import { Link } from 'react-router-dom'
+import { useAlert} from 'react-alert'
 
 export const Home = () => {
+        const { loading, productos, error} = useSelector(state=> state.products)
+    const alert= useAlert();
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        if (error){
+            return alert.error(error)
+        }
+
+        dispatch(getProducts());
+        alert.success("OK")
+    }, [dispatch])
+
+
+
     return (   
         <Fragment>  
+            {loading ? <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i> :(
+                <Fragment>
+
             <MetaData title="Explora el Mundo sin Limites"></MetaData>
             <h1 id="encabezado_productos">Ultimos Productos</h1>
 
