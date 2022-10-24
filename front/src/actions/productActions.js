@@ -47,7 +47,6 @@ export const getProductDetails = (id) => async(dispatch)=>{
     }
 }
 
-//comentario henry
 
 //clear error
 export const clearErrors = () => async(dispatch)=>{
