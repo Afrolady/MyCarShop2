@@ -8,6 +8,7 @@ dotenv.config({path: 'back/config/config.env'})
 //Configurar la base de datos. 
 connectDatabase();
 
+//se esta probando como crear issues
            
 //Llamamos al server.
 const server=app.listen(process.env.PORT, () => {
