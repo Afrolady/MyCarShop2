@@ -8,7 +8,7 @@ const Header = () => {
             <nav className='navbar row'>
                 <div className='col-12 col-md-3'>
                     <div className='navbar-brand'>
-                        <img src="./images/vetyshop.png" alt="Vety Shop Store Logo"></img>
+                        <img src="./images/LOGO.jpg" alt="My car shop Logo"></img>
                     </div>
                 </div>
 
@@ -18,7 +18,7 @@ const Header = () => {
                             type="text"
                             id="search_field"
                             class="form-control"
-                            placeholder='Que producto busca?'></input>
+                            placeholder='¿Que vehiculo buscas?'></input>
                         <div class="input-group-append">
                             <button id="search-btn" class="btn">
                                 <i class="fa fa-search-plus fa-2x text-white" aria-hidden="true"></i>
