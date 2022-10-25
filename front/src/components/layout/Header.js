@@ -21,7 +21,7 @@ const Header = () => {
                             placeholder='¿Que vehiculo buscas?'></input>
                         <div class="input-group-append">
                             <button id="search-btn" class="btn">
-                                <i class="fa fa  -search-plus fa-2x text-white" aria-hidden="true"></i>
+                                <i class="fa fa-search-plus fa-2x text-white" aria-hidden="true"></i>
                             </button>
                         </div>
                     </div>  
