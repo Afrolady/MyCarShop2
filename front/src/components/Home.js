@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
 
-const Home = props => {
+export const Home = () => {
   return (
     <Fragment>
         <h1 id="encabezado_productos">Ultimos Vehiculos</h1>
@@ -16,20 +15,18 @@ const Home = props => {
                             <div className='rating mt-auto'>
                                 <div className='rating-outer'>
                                     <div className='rating-inner'></div>
+                                </div>
+                                <span id='No_de_opiniones'> 5 reviews</span>
                             </div>
-                            <span id='No_de_opiniones'> 5 reviews</span>
+                            <p className='card-text'>$80.000.000</p><a href='#' id="ver_producto" className='btn btn-block'>
+                                Ver detalles
+                            </a>
                         </div>
-                        <p className='card-text'>$80.000.000</p><a href='#' id="ver_producto" className='btn btn-block'>
-                            Ver detalles
-                        </a>
                     </div> 
                 </div>   
             </div>
-
-
         </section>
             
-
     </Fragment>
   )
 }
