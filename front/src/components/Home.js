@@ -1,13 +1,18 @@
 import React, { Fragment } from 'react'
+import MetaData from './layout/MetaData'
+import {useDispatch} from 'react-redux' 
+import { getProducts } from '../actions/productActions'
 
 export const Home = () => {
+    
   return (
     <Fragment>
+        <MetaData title="imagine and live the experience"></MetaData>
         <h1 id="encabezado_productos">Ultimos Vehiculos</h1>
 
         <section id="productos" className='container mt-5'>
             <div className='row'>
-                {//Producto 1*/}
+                {/*Producto 1*/}
                 <div className='col-sm-12 col-md-6 col-lg-3 my-'>
                     <div className='card p-3 rounded'>
                         <img className='card-img-top mx-auto' src='./images/bmw m240.jpeg' alt='BMW m240'></img>
@@ -26,8 +31,8 @@ export const Home = () => {
                     </div> 
                 </div>   
 
-                {//Producto 2*/}
-                    <div className='col-sm-12 col-md-6 col-lg-3 my-'>
+                {/*Producto 2*/}
+                <div className='col-sm-12 col-md-6 col-lg-3 my-'>
                     <div className='card p-3 rounded'>
                         <img className='card-img-top mx-auto' src='./images/chevrolet d-max.jpeg' alt='Chevrolet D-max'></img>
                         <div className='card-body d-flex flex-column'>
@@ -45,8 +50,8 @@ export const Home = () => {
                     </div> 
                 </div>
 
-                {//Producto 3*/}
-                    <div className='col-sm-12 col-md-6 col-lg-3 my-'>
+                {/*Producto 3*/}
+                <div className='col-sm-12 col-md-6 col-lg-3 my-'>
                     <div className='card p-3 rounded'>
                         <img className='card-img-top mx-auto' src='./images/chevrolet joy.jpeg' alt='Chevrolet Joy'></img>
                         <div className='card-body d-flex flex-column'>
@@ -64,8 +69,8 @@ export const Home = () => {
                     </div> 
                 </div>
 
-                {//Producto 4*/}
-                    <div className='col-sm-12 col-md-6 col-lg-3 my-'>
+                {/*Producto 4*/}
+                <div className='col-sm-12 col-md-6 col-lg-3 my-'>
                     <div className='card p-3 rounded'>
                         <img className='card-img-top mx-auto' src='./images/chevrolet onix.jpeg' alt='Chevrolet Onix'></img>
                         <div className='card-body d-flex flex-column'>
