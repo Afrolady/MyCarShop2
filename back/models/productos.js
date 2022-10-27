@@ -38,13 +38,11 @@ const productosSchema=mongoose.Schema({
         required:[true,"Por favor seleccione la categoria del producto."],
         enum:{
             values:[
-                "Alimento seco",
-                "Alimento humedo",
-                "Accesorios",
-                "Cuidado e Higiene",
-                "Medicamentos",
-                "Snacks",
-                "Juguetes"
+                "Camioneta",
+                "Sedan",
+                "Hatchback",
+                "Deportivo",
+                
             ]
         }
     },
