@@ -4,4 +4,6 @@ const router= express.Router();
 
 router.route('/usuario/registro').post(registroUsuario)
 
-module.exports= router 
+
+module.exports= router
+
