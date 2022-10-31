@@ -13,6 +13,8 @@ const Header = () => {
                     </div>
                 </div>
 
+
+
                   <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
                     <div className="ml-4 dropdown d-inline">
                         <Link to="#!" className="btn dropdown-toggle text-white mr-4" type="button"
@@ -23,6 +25,7 @@ const Header = () => {
                             <Link className="dropdown-item" to="/">Pedidos</Link>
                             <Link className="dropdown-item" to="/">Mi cuenta</Link>
                             <Link className="dropdown-item" to="/">Cerrar Sesion</Link>
+
                         </div>
                     </div>
 

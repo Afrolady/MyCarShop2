@@ -41,8 +41,7 @@ const productosSchema=mongoose.Schema({
                 "Camioneta",
                 "Sedan",
                 "Hatchback",
-                "Deportivo",
-                
+                "Deportivo"  
             ]
         }
     },
