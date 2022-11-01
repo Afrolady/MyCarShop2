@@ -20,7 +20,7 @@ export const Home = () => {
                     {/*Producto 1*/}
                     <div className='col-sm-12 col-md-6 col-lg-3 my-'>
                         <div className='card p-3 rounded'>
-                            <img className='card-img-top mx-auto' src='./images/bmw m240.jpeg' alt='BMW m240'></img>
+                            <img className='card-img-top mx-auto' src='./images/greycar.jpeg' alt='BMW m240'></img>
                             <div className='card-body d-flex flex-column'>
                                 <h5 id='titulo_producto'><a href='http://localhost:3000'>BMW m240</a></h5>
                                 <div className='rating mt-auto'>
@@ -39,7 +39,7 @@ export const Home = () => {
                     {/*Producto 2*/}
                     <div className='col-sm-12 col-md-6 col-lg-3 my-'>
                         <div className='card p-3 rounded'>
-                            <img className='card-img-top mx-auto' src='./images/chevrolet d-max.jpeg' alt='Chevrolet D-max'></img>
+                            <img className='card-img-top mx-auto' src='./images/chevroletd-max.jpeg' alt='Chevrolet D-max'></img>
                             <div className='card-body d-flex flex-column'>
                                 <h5 id='titulo_producto'><a href='http://localhost:3000'>Chevrolet D-max</a></h5>
                                 <div className='rating mt-auto'>
@@ -58,7 +58,7 @@ export const Home = () => {
                     {/*Producto 3*/}
                     <div className='col-sm-12 col-md-6 col-lg-3 my-'>
                         <div className='card p-3 rounded'>
-                            <img className='card-img-top mx-auto' src='./images/chevrolet joy.jpeg' alt='Chevrolet Joy'></img>
+                            <img className='card-img-top mx-auto' src='./images/chevroletjoy.jpeg' alt='Chevrolet Joy'></img>
                             <div className='card-body d-flex flex-column'>
                                 <h5 id='titulo_producto'><a href='http://localhost:3000'>Chevrolet Joy</a></h5>
                                 <div className='rating mt-auto'>
@@ -77,7 +77,7 @@ export const Home = () => {
                     {/*Producto 4*/}
                     <div className='col-sm-12 col-md-6 col-lg-3 my-'>
                         <div className='card p-3 rounded'>
-                            <img className='card-img-top mx-auto' src='./images/chevrolet onix.jpeg' alt='Chevrolet Onix'></img>
+                            <img className='card-img-top mx-auto' src='./images/chevroletonix.jpeg' alt='Chevrolet Onix'></img>
                             <div className='card-body d-flex flex-column'>
                                 <h5 id='titulo_producto'><a href='http://localhost:3000'>Chevrolet Onix</a></h5>
                                 <div className='rating mt-auto'>

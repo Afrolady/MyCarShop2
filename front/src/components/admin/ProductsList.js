@@ -53,7 +53,7 @@ export const ProductsList = () => {
         }
 
         productos.forEach(product => {
-            data.rows.push({ 
+            data.rows.push({
                 nombre: product.nombre,
                 precio: `$${product.precio}`,
                 inventario: product.inventario,
@@ -87,7 +87,6 @@ export const ProductsList = () => {
 
                 <div className="col-12 col-md-10">
                     <Fragment>
-                        <h1 className="my-5">Todos los Productos</h1> //la otra opciones All Products
                         <h1 className="my-5">Productos Registrados</h1>
 
                         {loading ? <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i> :(
