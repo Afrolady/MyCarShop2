@@ -1,36 +1,208 @@
 {
     "item": [
         {
-            "_id": "63513206109735e58d94addd",
-            "producto": "Agility Dog Creamy Food",
-            "precio": 69000,
-            "imagen": "./images/productos/agility_blando_perros.png",
-            "inventario": 40,
-            "__v": 0
+            "nombre": "Toyota Prado Tx Sumo T 2.7 2011",
+            "precio": 132000000,
+            "descripcion": "Segundo dueño, Mantenimientos al día en Tuyomotor, Documentación en orden",
+            "calificacion": 4.5,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_2X_869416-MCO52004413144_102022-F.webp"
+                }
+            ],
+            "categoria": "Camioneta",
+            "vendedor": "Juan",
+            "inventario": 1,
+            "numCalificaciones": 5,
+            "opiniones": []
         },
         {
-            "_id": "63513298109735e58d94ade0",
-            "nombre": "Chunky Cachorros alimento humedo",
-            "precio": 23000,
-            "imagen": "./images/productos/chunky_blando_perros.jpeg",
-            "inventario": 120,
-            "__v": 0
+            "nombre": "Mazda 3 Grand Touring 2.5 2020",
+            "precio": 105000000,
+            "descripcion": "Segundo dueño, Mantenimientos al día en Tuyomotor, Documentación en orden",
+            "calificacion": 4.5,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_2X_765136-MCO51829185772_102022-F.webp"
+                }
+            ],
+            "categoria": "Camioneta",
+            "vendedor": "Leydy",
+            "inventario": 1,
+            "numCalificaciones": 9,
+            "opiniones": []
         },
         {
-            "_id": "635132ea109735e58d94ade3",
-            "nombre": "Chunky gatitos alimento humedo",
-            "precio": 18000,
-            "imagen":  "./images/productos/felix_blando_gatos.jpeg",
-            "inventario": 20,
-            "__v": 0
+            "nombre": "Mazda 3 All New 2.0 2012",
+            "precio": 44600000,
+            "descripcion": "MAZDA 3 ALL NEW 2.0 2012,Versión full, Automático",
+            "calificacion": 3.5,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_870201-MCO51719583495_092022-O.webp"
+                }
+            ],
+            "categoria": "Sedan",
+            "vendedor": "Henry",
+            "inventario": 1,
+            "numCalificaciones": 10,
+            "opiniones": []
         },
         {
-            "_id": "63513379109735e58d94ade6",
-            "nombre": "Purina Pedegree Perros alimento humedo",
-            "precio": 20000,
-            "imagen":"./images/productos/pedegree_blando_perros.jpeg",
-            "inventario": 200,
-            "__v": 0
+            "nombre": "Chevrolet Onix Ltz Turbo 2021",
+            "precio": 63000000,
+            "descripcion": "UNICO DUEÑO, ENCENDIDO DE BOTON, VERSION LTZ TURBO, LISTO PARA TRASPASOS, PAPELES AL DIA",
+            "calificacion": 4.0,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_678337-MCO51583689586_092022-O.webp"
+                }
+            ],
+            "categoria": "Sedan",
+            "vendedor": "Adriana",
+            "inventario": 1,
+            "numCalificaciones": 10,
+            "opiniones": []
+        },
+        {
+            "nombre": "Volkswagen Amarok Comfortline Modelo 2022 Blindado",
+            "precio": 235000000,
+            "descripcion": "UVOLKSWAGEN AMAROK COMFORTLINE, MODELO 2022,0 KM. MOTOR 2.000cc Bi-turbo diesel.",
+            "calificacion": 4.7,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_667097-MCO51965646428_102022-O.webp"
+                }
+            ],
+            "categoria": "Camioneta",
+            "vendedor": "Julio",
+            "inventario": 5,
+            "numCalificaciones": 4,
+            "opiniones": []
+        },
+        {
+            "nombre": "Chevrolet Joy Hachback Y Sedán",
+            "precio": 60000000,
+            "descripcion": "Dirección: Asistida, Frenos ABS, Aire acondicionado, Bluetooth, 0km",
+            "calificacion": 4.0,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_796646-MCO51657125253_092022-O.webp"
+                }
+            ],
+            "categoria": "Sedán",
+            "vendedor": "Juan",
+            "inventario": 5,
+            "numCalificaciones": 6,
+            "opiniones": []
+        },
+        {
+            "nombre": "Bmw M240 Xdrive",
+            "precio": 259900000,
+            "descripcion": "Marca BMW, Modelo, Serie 2, Año, 2022, Color Negro, 0km",
+            "calificacion": 4.7,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_787208-MCO51757152353_092022-O.webp"
+                }
+            ],
+            "categoria": "Sedan",
+            "vendedor": "Leidy",
+            "inventario": 3,
+            "numCalificaciones": 10,
+            "opiniones": []
+        },
+        {
+            "nombre": "Mercedes Benz Gle 450 Suv B2+",
+            "precio": 410900000,
+            "descripcion": "Mercedes-Benz GLE450 SUV 2022, Color: Plata, 0km",
+            "calificacion": 4.7,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_802546-MCO51714590262_092022-O.webp"
+                }
+            ],
+            "categoria": "Camioneta",
+            "vendedor": "",
+            "inventario": 2,
+            "numCalificaciones": 8,
+            "opiniones": []
+        },
+        {
+            "nombre": "Toyota Prado",
+            "precio": 150900000,
+            "descripcion": "VERSION 5 PRUEBAS AUTOMATICA, TX-L GASOLINA, LARGO EN (mm) 4.840, ANCHO EN (mm) 1.885, ALTURA EN (mm) 1.890, TANQUE COMBUSTIBLE (gal) 23",
+            "calificacion": 4.7,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://www.toyota.com.co/wp-content/uploads/2020/08/Disen%CC%83o1-1024x683.png"
+                }
+            ],
+            "categoria": "Camioneta",
+            "vendedor": "Adriana",
+            "inventario": 3,
+            "numCalificaciones": 7,
+            "opiniones": []
+        },
+        {
+            "nombre": "Chevrolet D-Max",
+            "precio": 110900000,
+            "descripcion": "Propulsor diésel Common Rail (CRDi) de 2.5 litros y 16 válvulas, potencia máxima de 130 caballos a 3.600 rpm y torque de 320 Nm entre 1.800 y 2.800 vueltas de tacómetro",
+            "calificacion": 4.7,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://www.elcarrocolombiano.com/wp-content/uploads/2018/04/20180428-CHEVROLET-D-MAX-2019-COLOMBIA-01.jpg"
+                }
+            ],
+            "categoria": "Camioneta",
+            "vendedor": "Henry",
+            "inventario": 2,
+            "numCalificaciones": 6,
+            "opiniones": []
+        },
+        {
+            "nombre": "Citroën C3 Unique 1.2 Turbo Automatico",
+            "precio": 88990000,
+            "descripcion": "Marca Citroën, Modelo C3, Año 2023, 0km",
+            "calificacion": 4.1,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_704828-MCO51280290681_082022-O.webp"
+                }
+            ],
+            "categoria": "Hatchback",
+            "vendedor": "Julio",
+            "inventario": 2,
+            "numCalificaciones": 2,
+            "opiniones": []
+        },
+        {
+            "nombre": "Ford Mustang",
+            "precio": 158990000,
+            "descripcion": "Motor Cuatro Valvulas, Potencia 5.0L V8, 457hp, Número de asientos, 4",
+            "calificacion": 4.1,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://loscoches.com/wp-content/uploads/2021/04/carros-deportivos-potencia.jpg"
+                }
+            ],
+            "categoria": "Deportivo",
+            "vendedor": "Juan",
+            "inventario": 3,
+            "numCalificaciones": 1,
+            "opiniones": []
         }
     ]
 }
