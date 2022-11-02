@@ -22,32 +22,52 @@ const Cart = () => {
     //Json de ejemplo, falta colocar la versión nuestra de los autos
    let cartItems=[
         {
-            "_id": "63513206109735e58d94addd",
-            "nombre": "Agility Dog Creamy Food",
-            "precio": 69000,
-            "imagen": "./images/productos/agility_blando_perros.png",
-            "inventario": 40,
+            "nombre": "Bmw M240 Xdrive",
+            "precio": 259900000,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_787208-MCO51757152353_092022-O.webp"
+                }
+            ],
+            "inventario": 3,
+            "opiniones": []
         },
         {
-            "_id": "63513298109735e58d94ade0",
-            "nombre": "Chunky Cachorros alimento humedo",
-            "precio": 23000,
-            "imagen": "./images/productos/chunky_blando_perros.jpeg",
-            "inventario": 120,
+            "nombre": "Chevrolet D-Max",
+            "precio": 110900000,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://www.elcarrocolombiano.com/wp-content/uploads/2018/04/20180428-CHEVROLET-D-MAX-2019-COLOMBIA-01.jpg"
+                }
+            ],
+            "inventario": 2,
+            "opiniones": []
         },
         {
-            "_id": "635132ea109735e58d94ade3",
-            "nombre": "Chunky gatitos alimento humedo",
-            "precio": 18000,
-            "imagen": "./images/productos/felix_blando_gatos.jpeg",
-            "inventario": 20,
+            "nombre": "Chevrolet Joy Hachback Y Sedán",
+            "precio": 60000000,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_796646-MCO51657125253_092022-O.webp"
+                }
+            ],
+            "inventario": 5,
+            "opiniones": []
         },
         {
-            "_id": "63513379109735e58d94ade6",
-            "nombre": "Purina Pedegree Perros alimento humedo",
-            "precio": 20000,
-            "imagen":  "./images/productos/pedegree_blando_perros.jpeg",
-            "inventario": 200,
+            "nombre": "Chevrolet Onix Ltz Turbo 2021",
+            "precio": 63000000,
+            "imagen": [
+                {
+                    "public_id": "",
+                    "url": "https://http2.mlstatic.com/D_NQ_NP_678337-MCO51583689586_092022-O.webp"
+                }
+            ],
+            "inventario": 1,
+            "opiniones": []
         }
     ]
 
