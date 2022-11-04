@@ -1,13 +1,11 @@
 const User = require("../models/auth")
 const ErrorHandler= require("../utils/errorHandler")
-const catchAsyncErrors= require("../middleware/catchAsyncErrors")
+const catchAsyncErrors= require("../middleware/catchAsyncErrors");
 const tokenEnviado = require("../utils/jwtToken");
 const sendEmail = require("../utils/sendEmail")
 const crypto = require("crypto")
 
-
 //Registrar un nuevo usuario /api/usuario/registro
-
 exports.registroUsuario= catchAsyncErrors(async (req, res, next) =>{
     const {nombre, email, password} = req.body;
 
@@ -20,7 +18,6 @@ exports.registroUsuario= catchAsyncErrors(async (req, res, next) =>{
             url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKZwmqodcPdQUDRt6E5cPERZDWaqy6ITohlQ&usqp=CAU"
         }
     })
-
     tokenEnviado(user,201,res)
 })
 
@@ -48,6 +45,7 @@ exports.loginUser = catchAsyncErrors(async(req, res, next)=>{
     }
 
     tokenEnviado(user,200,res)
+
 })
 
 //Cerrar Sesion (logout)
@@ -74,17 +72,17 @@ exports.forgotPassword = catchAsyncErrors ( async( req, res, next) =>{
     
     await user.save({validateBeforeSave: false})
 
-//Crear una url para hacer el reset de la contraseña
+    //Crear una url para hacer el reset de la contraseña
     const resetUrl= `${req.protocol}://${req.get("host")}/api/resetPassword/${resetToken}`;
 
     const mensaje=`Hola!\n\nTu link para ajustar una nueva contraseña es el 
     siguiente: \n\n${resetUrl}\n\n
-    Si no solicitaste este link, por favor comunicate con soporte.\n\n Att:\nMyCarShop Store`
+    Si no solicitaste este link, por favor comunicate con soporte.\n\n Att:\nVetyShop Store`
 
     try{
         await sendEmail({
             email:user.email,
-            subject: "MyCarShop Recuperación de la contraseña",
+            subject: "VetyShop Recuperación de la contraseña",
             mensaje
         })
         res.status(200).json({
@@ -110,23 +108,25 @@ exports.resetPassword = catchAsyncErrors(async (req,res,next) =>{
         resetPasswordToken,
         resetPasswordExpire:{$gt: Date.now()}
     })
-//El usuario si esta en la base de datos?
+    //El usuario si esta en la base de datos?
     if(!user){
         return next(new ErrorHandler("El token es invalido o ya expiró",400))
     }
-//Diligenciamos bien los campos?
+    //Diligenciamos bien los campos?
     if(req.body.password!==req.body.confirmPassword){
         return next(new ErrorHandler("Contraseñas no coinciden",400))
     }
 
-//Setear la nueva contraseña
+    //Setear la nueva contraseña
     user.password= req.body.password;
     user.resetPasswordToken=undefined;
     user.resetPasswordExpire=undefined;
 
     await user.save();
     tokenEnviado(user, 200, res)
-    //Ver perfil de usuario (Usuario que esta logueado)
+})
+
+//Ver perfil de usuario (Usuario que esta logueado)
 exports.getUserProfile= catchAsyncErrors( async (req, res, next)=>{
     const user= await User.findById(req.user.id);
 
@@ -221,5 +221,22 @@ exports.updateUser= catchAsyncErrors (async(req, res, next)=>{
     res.status(200).json({
         success:true,
         user
+    })
+})
+
+//Eliminar usuario (admin)
+exports.deleteUser= catchAsyncErrors (async (req, res, next)=>{
+    const user = await User.findById(req.params.id);
+
+    if(!user){
+        return next(new ErrorHandler(`Usuario con id: ${req.params.id} 
+        no se encuentra en nuestra base de datos`))
+    }
+
+    await user.remove();
+
+    res.status(200).json({
+        success:true,
+        message:"Usuario eliminado correctamente"
     })
 })
