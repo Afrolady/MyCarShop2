@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react'
 import "../../App.css"
 import { Link } from "react-router-dom" 
+import { Search } from './Search'
 
 const Header = () => {
 
@@ -9,28 +10,15 @@ const Header = () => {
             <nav className='navbar row'>
                 <div className='col-12 col-md-3'>
                     <div className='navbar-brand'>
-                        <img src="./images/LOGO_1.png" alt="My car shop Logo"></img>
+                        <img src="../images/LOGO_1.png" alt="My car shop Logo"></img>
                     </div>
                 </div>
 
-                 <div className='col-12 col-md-6 mt-2 mt-md-0'>
-                    <div className="input-group">
-                        <input
-                            type="text"
-                            id="search_field"
-                            class="form-control"
-                            placeholder='Que producto busca?'></input>
-                        <div class="input-group-append">
-                            <button id="search-btn" class="btn">
-                                <i class="fa fa-search-plus fa-2x text-white" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                    </div>
+                <div className='col-12 col-md-6 mt-2 mt-md-0'>
+                 {/*Aqui va buscar*/}
+                 <Search />
                 </div>
-
-
-
-                  <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
+                <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
                     <div className="ml-4 dropdown d-inline">
                         <Link to="#!" className="btn dropdown-toggle text-white mr-4" type="button"
                             id="dropDownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,7 +28,6 @@ const Header = () => {
                             <Link className="dropdown-item" to="/">Pedidos</Link>
                             <Link className="dropdown-item" to="/">Mi cuenta</Link>
                             <Link className="dropdown-item" to="/">Cerrar Sesion</Link>
-
                         </div>
                     </div>
 
@@ -53,6 +40,6 @@ const Header = () => {
         </Fragment>
     )
 
-    }
+}
 
 export default Header
