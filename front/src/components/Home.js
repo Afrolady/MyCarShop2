@@ -1,14 +1,31 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import MetaData from './layout/MetaData'
-import {useDispatch} from 'react-redux' 
+import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../actions/productActions'
+import { useParams, Link } from 'react-router-dom'
+import { useAlert } from 'react-alert'
+import Pagination from 'react-js-pagination'
+
 
 export const Home = () => {
+    const params= useParams();
+    const keyword= params.keyword;
+    const [currentPage, setCurrentPage] = useState(1)
+    const { loading, products, error, resPerPage, productsCount } = useSelector(state => state.products)
+    const alert = useAlert();
+    
     const dispatch = useDispatch();
-    useEffect (()=> {
-        dispatch(getProducts());
-    }, [dispatch])
+    useEffect(() => {
+        if (error) {
+            return alert.error(error)
+        }
 
+        dispatch(getProducts(currentPage, keyword));
+    }, [dispatch, alert, error, currentPage, keyword])
+
+    function setCurrentPageNo(pageNumber){
+        setCurrentPage(pageNumber)
+    }
 
     return (
         <Fragment>
@@ -96,6 +113,20 @@ export const Home = () => {
                 </div>
             </section>
             
+            <div className='d-flex justify-content-center mt-5'>
+                        <Pagination
+                        activePage={currentPage}
+                        itemsCountPerPage={resPerPage}
+                        totalItemsCount={productsCount}
+                        onChange={setCurrentPageNo}
+                        nextPageText={'Siguiente'}
+                        prevPageText={'Anterior'}
+                        firstPageText={'Primera'}
+                        lastPageText={'Ultima'}
+                        itemClass='page-item'
+                        linkClass='page-link'
+                        />
+                    </div>
         </Fragment>
     )
 }
