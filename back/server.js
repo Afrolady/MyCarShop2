@@ -1,20 +1,22 @@
-const app=require("./app")  
+const app=require("./app")
 const connectDatabase = require("./config/database");
+const cloudinary= require("cloudinary")
 
-//setear el archivo de configuración. 
-const dotenv = require("dotenv");
+//Setear el archivo de configuración
+const dotenv=require("dotenv");
 dotenv.config({path: 'back/config/config.env'})
 
-//Configurar la base de datos. 
+//Configurar base de datos
 connectDatabase();
 
-//se esta probando como crear issues
-           
-//Llamamos al server.
-const server=app.listen(process.env.PORT, () => {
-    console.log(`Servidor iniciando en el puerto: ${process.env.PORT} en modo: ${process.env.NODE_ENV}`)
+//Configurar Cloudinary
+cloudinary.config({
+    cloud_name:process.env.CLOUDINARY_CLOUD_NAME,
+    api_key:process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
-    
-
-    
+//Llamemos al server
+const server=app.listen(process.env.PORT, () => {
+    console.log(`Servidor iniciado en el puerto: ${process.env.PORT} en modo: ${process.env.NODE_ENV}`)
+})
