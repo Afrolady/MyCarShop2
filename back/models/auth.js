@@ -40,10 +40,8 @@ const usuarioSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-
     resetPasswordToken: String,
     resetPasswordExpire: Date
-
 })
 
 //Encriptamos contraseña antes de guardarla
@@ -78,6 +76,5 @@ usuarioSchema.methods.genResetPasswordToken = function () {
 
     return resetToken
 }
-
 
 module.exports = mongoose.model("auth", usuarioSchema)
