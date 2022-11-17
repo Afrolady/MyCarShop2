@@ -1,0 +1,38 @@
+{
+  "name": "afroshop",
+  "version": "1.0.0",
+  "description": "Empresa de desarrolladores de softwares ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node back/server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon back/server",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon back/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Afrolady/AfroShop.git"
+  },
+  "author": "The Overcomers 2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Afrolady/AfroShop/issues"
+  },
+  "homepage": "https://github.com/Afrolady/AfroShop#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cloudinary": "^1.32.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mdbreact": "^5.2.0",
+    "mongoose": "^6.6.5",
+    "nodemailer": "^6.8.0",
+    "rc-slider": "^10.0.1",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
