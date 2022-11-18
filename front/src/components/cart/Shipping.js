@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import CheckoutSteps from './CheckOutSteps';
 
 export const Shipping = () => {
-    let Pais = require('./colombia.json');
+    let Pais = require('./Colombia.json');
     const navigate= useNavigate()
     const { shippingInfo } = useSelector(state => state.cart )
 
