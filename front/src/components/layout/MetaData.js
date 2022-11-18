@@ -7,6 +7,6 @@ const MetaData = ({title}) => {
             <title>{`${title} - MyCarShop`}</title>
         </Helmet>
     )
-     
+
 }
 export default MetaData

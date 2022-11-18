@@ -99,7 +99,7 @@ const Cart = () => {
 
                                 <hr />
                                 <button id="checkout_btn" className="btn btn-primary btn-block" onClick={checkOutHandler}>Comprar!</button>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </Fragment>

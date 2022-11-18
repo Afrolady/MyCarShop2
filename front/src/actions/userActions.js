@@ -37,8 +37,6 @@ import {
     UPDATE_USER_REQUEST,
     UPDATE_USER_SUCCESS,
     UPDATE_USER_FAIL
-
-
 } from "../constants/userConstants"
 
 //Login
@@ -51,7 +49,7 @@ export const login = (email, password) => async (dispatch) => {
                 'Content-Type': 'application/json'
             }
         }
-        const {data} = await axios.get('/api/login', {email, password}, config)
+        const {data} = await axios.post('/api/login', {email, password}, config)
 
         dispatch({
             type:LOGIN_SUCCESS,
@@ -65,7 +63,6 @@ export const login = (email, password) => async (dispatch) => {
         })
     }
 }
-
 
 //REGISTRAR USUARIO
 export const register = (userData) => async (dispatch) => {
@@ -315,6 +312,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
         })
     }
 }
+
 
 //Clear error
 export const clearErrors = () => async (dispatch) =>{

@@ -21,10 +21,13 @@ const NewProduct = () => {
     const [imagenPreview, setImagenPreview] = useState([])
 
     const categorias = [
-        "Camioneta",
-        "Deportivo",
-        "Sedan",
-        "Hatchback"
+        "Alimento seco",
+        "Alimento humedo",
+        "Accesorios",
+        "Cuidado e Higiene",
+        "Medicamentos",
+        "Snacks",
+        "Juguetes"
     ]
 
     const alert = useAlert();

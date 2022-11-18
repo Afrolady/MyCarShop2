@@ -9,7 +9,7 @@ import CheckoutSteps from './CheckOutSteps';
 export const Shipping = () => {
     let Pais = require('./Colombia.json');
     const navigate= useNavigate()
-    const { shippingInfo } = useSelector(state => state.cart )
+    const { shippingInfo } = useSelector(state => state.cart)
 
     const [direccion, setDireccion] = useState(shippingInfo.direccion)
     const [ciudad, setCiudad] = useState(shippingInfo.ciudad)

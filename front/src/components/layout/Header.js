@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useAlert } from 'react-alert'
 import { logout} from "../../actions/userActions"
 
+
 const Header = () => {
     const {cartItems} = useSelector(state=>state.cart)
     
@@ -18,6 +19,7 @@ const Header = () => {
         dispatch(logout());
         alert.success("LogOut exitoso")
     }
+
     return (
         <Fragment>
             <nav className='navbar row'>
@@ -27,7 +29,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className='col-12 col-md-5 mt-2 mt-md-0'>
+                 <div className='col-12 col-md-5 mt-2 mt-md-0'>
                     {/*Aqui va buscar*/}
                     <Search />
                 </div>
@@ -54,7 +56,7 @@ const Header = () => {
                                     <Link className="dropdown-item" to="/dashboard">Adm. Productos</Link>
                                 )}
 
-                                <Link className="dropdown-item" to="/">Pedidos</Link>
+                                <Link className="dropdown-item" to="/myOrders">Pedidos</Link>
                                 <Link className="dropdown-item" to="/yo">Mi Perfil</Link>
                                 <Link className="dropdown-item" to="/" onClick={logoutHandler}>Cerrar Sesion</Link>
                             </div>

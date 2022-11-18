@@ -12,13 +12,11 @@ const options = {
   transition: transitions.SCALE
 }
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Provider store={store}>
+  <Provider store={store}>
     <AlertProvider template={AlertTemplate} {...options}>
       <App />
     </AlertProvider>
   </Provider>
-);  
-
+);

@@ -28,7 +28,6 @@ export const UpdateProduct = () => {
         "Hatchback"
     ]
 
-
     const alert = useAlert();
     const dispatch = useDispatch();
 

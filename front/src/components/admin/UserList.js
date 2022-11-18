@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { MDBDataTable } from 'mdbreact'
 
 import MetaData from '../layout/MetaData'
@@ -7,54 +7,58 @@ import Sidebar from './Sidebar'
 
 import { useAlert } from 'react-alert'
 import { useDispatch, useSelector } from 'react-redux'
-import {  clearErrors, deleteProduct, getAdminProducts } from '../../actions/productActions'
+import { allUsers, deleteUser, clearErrors } from '../../actions/userActions'
+import { DELETE_USER_RESET } from '../../constants/userConstants'
 
-const ProductsList = () => {
-
+const UsersList = () => {
+    const navigate=useNavigate();
     const alert = useAlert();
     const dispatch = useDispatch();
 
-    const { loading, error, products } = useSelector(state => state.products);
-    
-    const deleteProductHandler= (id)=> {
-        const response=window.confirm("Esta seguro de querer borrar este producto?")
-        if (response){
-            dispatch(deleteProduct(id))
-            alert.success("Producto eliminado correctamente")
-            window.location.reload(false)
-        }
-    }
+    const { loading, error, users } = useSelector(state => state.allUsers);
+    const { isDeleted } = useSelector(state => state.user)
+
     useEffect(() => {
-        dispatch(getAdminProducts());
+        dispatch(allUsers());
 
         if (error) {
             alert.error(error);
             dispatch(clearErrors())
         }
 
-    }, [dispatch, alert, error])
+        if (isDeleted) {
+            alert.success('Usuario Eliminado correctamente');
+            navigate('/admin/users');
+            dispatch({ type: DELETE_USER_RESET })
+        }
 
-    const setProducts = () => {
+    }, [dispatch, alert, error, isDeleted])
+
+    const deleteUserHandler = (id) => {
+        dispatch(deleteUser(id))
+    }
+
+    const setUsers = () => {
         const data = {
             columns: [
+                {
+                    label: 'ID Usuario',
+                    field: 'id',
+                    sort: 'asc'
+                },
                 {
                     label: 'Nombre',
                     field: 'nombre',
                     sort: 'asc'
                 },
                 {
-                    label: 'Precio',
-                    field: 'precio',
+                    label: 'Email',
+                    field: 'email',
                     sort: 'asc'
                 },
                 {
-                    label: 'Inventario',
-                    field: 'inventario',
-                    sort: 'asc'
-                },
-                {
-                    label: 'Vendedor',
-                    field: 'vendedor',
+                    label: 'Rol',
+                    field: 'rol',
                     sort: 'asc'
                 },
                 {
@@ -64,20 +68,19 @@ const ProductsList = () => {
             ],
             rows: []
         }
-        products.forEach(product => {
-            data.rows.push({
-                nombre: product.nombre,
-                precio: `$${product.precio}`,
-                inventario: product.inventario,
-                vendedor: product.vendedor,
-                acciones: <Fragment>
-                    <Link to={`/producto/${product._id}`} className="btn btn-primary py-1 px-2">
-                        <i className="fa fa-eye"></i>
-                    </Link><Link to={`/updateProduct/${product._id}`} className="btn btn-warning py-1 px-2">
-                    <i class="fa fa-pencil"></i>
-                    </Link>
 
-                    <button className="btn btn-danger py-1 px-2 ml-2" onClick={() => deleteProductHandler(product._id)}>
+        users.forEach(user => {
+            data.rows.push({
+                id: user._id,
+                nombre: user.nombre,
+                email: user.email,
+                rol: user.role,
+
+                acciones: <Fragment>
+                    <Link to={`/admin/user/${user._id}`} className="btn btn-primary py-1 px-2">
+                        <i className="fa fa-pencil"></i>
+                    </Link>
+                    <button className="btn btn-danger py-1 px-2 ml-2" onClick={() => deleteUserHandler(user._id)}>
                         <i className="fa fa-trash"></i>
                     </button>
                 </Fragment>
@@ -87,9 +90,10 @@ const ProductsList = () => {
         return data;
     }
 
+
     return (
         <Fragment>
-            <MetaData title={'Todos los productos'} />
+            <MetaData title={'Usuarios Registrados'} />
             <div className="row">
                 <div className="col-12 col-md-2">
                     <Sidebar />
@@ -97,11 +101,11 @@ const ProductsList = () => {
 
                 <div className="col-12 col-md-10">
                     <Fragment>
-                        <h1 className="my-5">Todos los Productos</h1>
+                        <h1 className="my-5">Usuarios Registrados</h1>
 
                         {loading ? <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i> : (
                             <MDBDataTable
-                                data={setProducts()}
+                                data={setUsers()}
                                 className="px-3"
                                 bordered
                                 striped
@@ -117,4 +121,4 @@ const ProductsList = () => {
     )
 }
 
-export default ProductsList
+export default UsersList

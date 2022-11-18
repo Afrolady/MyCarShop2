@@ -19,7 +19,6 @@ import {
     DELETE_PRODUCT_REQUEST,
     UPDATE_PRODUCT_REQUEST,
     UPDATE_PRODUCT_SUCCESS,
-    UPDATE_PRODUCT_FAIL,
     NEW_REVIEW_REQUEST,
     NEW_REVIEW_SUCCESS,
     NEW_REVIEW_FAIL,
@@ -30,8 +29,6 @@ import {
     DELETE_REVIEW_REQUEST,
     DELETE_REVIEW_SUCCESS,
     DELETE_REVIEW_FAIL
-
-
 } from '../constants/productConstants';
 
 export const getProducts = (currentPage = 1, keyword = '', precio) => async (dispatch) => {
@@ -160,7 +157,6 @@ export const updateProduct = (id, productData) => async (dispatch) =>{
         })
     }
 }
-
 //registar una review
 export const newReview = (reviewData) => async (dispatch) => {
     try {
@@ -232,8 +228,6 @@ export const deleteReview = (id, productId) => async (dispatch) => {
         })
     }
 }
-
-
 
 //clear error
 export const clearErrors = () => async (dispatch) => {

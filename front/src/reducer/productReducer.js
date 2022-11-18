@@ -20,8 +20,17 @@ import {
     UPDATE_PRODUCT_SUCCESS,
     UPDATE_PRODUCT_FAIL,
     UPDATE_PRODUCT_RESET,
-
-
+    NEW_REVIEW_REQUEST,
+    NEW_REVIEW_SUCCESS,
+    NEW_REVIEW_FAIL,
+    NEW_REVIEW_RESET,
+    GET_REVIEWS_REQUEST,
+    GET_REVIEWS_SUCCESS,
+    GET_REVIEWS_FAIL,
+    DELETE_REVIEW_REQUEST,
+    DELETE_REVIEW_SUCCESS,
+    DELETE_REVIEW_RESET,
+    DELETE_REVIEW_FAIL
 } from "../constants/productConstants";
 
 //Ver productos
@@ -179,4 +188,114 @@ export const productReducer= (state = {}, action)=>{
         default:
             return state
     }
-}   
+}
+
+//REDUCER PARA DEJAR UNA OPINION (REVIEW) Y CALIFICACION (RATING)
+export const newReviewReducer = (state = {}, action) => {
+    switch (action.type) {
+
+        case NEW_REVIEW_REQUEST:
+            return {
+                ...state,
+                loading: true
+            }
+
+        case NEW_REVIEW_SUCCESS:
+            return {
+                loading: false,
+                success: action.payload
+            }
+
+        case NEW_REVIEW_FAIL:
+            return {
+                ...state,
+                error: action.payload
+            }
+
+        case NEW_REVIEW_RESET:
+            return {
+                ...state,
+                success: false
+            }
+
+        case CLEAR_ERRORS:
+            return {
+                ...state,
+                error: null
+            }
+
+        default:
+            return state
+    }
+}
+
+export const productReviewsReducer = (state = { opiniones: [] }, action) => {
+    switch (action.type) {
+
+        case GET_REVIEWS_REQUEST:
+            return {
+                ...state,
+                loading: true
+            }
+
+        case GET_REVIEWS_SUCCESS:
+            return {
+                loading: false,
+                opiniones: action.payload
+            }
+
+        case GET_REVIEWS_FAIL:
+            return {
+                ...state,
+                error: action.payload
+            }
+
+        case CLEAR_ERRORS:
+            return {
+                ...state,
+                error: null
+            }
+
+        default:
+            return state
+    }
+}
+
+export const reviewReducer = (state = {}, action) => {
+    switch (action.type) {
+
+        case DELETE_REVIEW_REQUEST:
+            return {
+                ...state,
+                loading: true
+            }
+
+        case DELETE_REVIEW_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                isDeleted: action.payload
+            }
+
+        case DELETE_REVIEW_FAIL:
+            return {
+                ...state,
+                error: action.payload
+            }
+
+        case DELETE_REVIEW_RESET:
+            return {
+                ...state,
+                isDeleted: false
+            }
+
+        case CLEAR_ERRORS:
+            return {
+                ...state,
+                error: null
+            }
+
+        default:
+            return state
+    }
+} 
