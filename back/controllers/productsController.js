@@ -51,7 +51,6 @@ exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
     if (!product) {
         return next(new ErrorHandler("Producto no encontrado", 404))
     }
-
     let imagen=[]
 
     if (typeof req.body.imagen=="string"){
@@ -177,7 +176,7 @@ exports.createProductReview = catchAsyncErrors(async (req, res, next) => {
 
 })
 
-//Ver todas los review de un producto
+//Ver todas las review de un producto
 exports.getProductReviews = catchAsyncErrors(async (req, res, next) => {
     const product = await producto.findById(req.query.id)
 

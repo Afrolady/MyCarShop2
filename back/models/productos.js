@@ -33,6 +33,7 @@ const productosSchema=mongoose.Schema({
             }
         }
     ],
+
     categoria:{
         type:String,
         required:[true,"Por favor seleccione la categoria del producto."],
@@ -41,10 +42,11 @@ const productosSchema=mongoose.Schema({
                 "Camioneta",
                 "Deportivo",
                 "Sedan",
-                "Hatchback"
+                "Hatchback"              
             ]
         }
     },
+
     vendedor:{
         type:String,
         required:[true,"Por favor registre el vendedor de producto"]
