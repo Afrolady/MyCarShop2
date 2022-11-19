@@ -59,7 +59,7 @@ export const Home = () => {
                             ></Slider>
 
                             {products && products.map(producto => (
-                                <div key={producto._id} className='col-sm-12 col-md-6 col-lg-3 my-3'>
+                                <div key={producto._id} className='col-sm-12 col-md-6 col-lg-3 my-3'>  
                                     <div className='card p-3 rounded'>
                                         <img className='card-img-top mx-auto' src={producto.imagen[0].url} alt={producto.imagen[0].public_id}></img>
                                         <div className='card-body d-flex flex-column'>
