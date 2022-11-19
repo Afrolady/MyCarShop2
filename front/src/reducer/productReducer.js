@@ -53,7 +53,7 @@ export const productsReducer = (state = { products: [] }, action) => {
             }
         
         case ADMIN_PRODUCTS_SUCCESS:
-            return {
+            return {    
                 loading:false,
                 products:action.payload
             }
