@@ -5,12 +5,12 @@ const sendEmail = async options =>{
         host: "smtp.office365.com",
         port: 587,
         auth: {
-          user: "ozzyta@outlook.com",
-          pass: "lhqyxlcozvmnrlkw"
+          user: "juandavid_v3@hotmail.com",//no sé si se debe modificar, o si es necesario, preguntar a Isabel
+          pass: "lhqyxlcozvmnrlkw"//pendiente de verificación en microsotf, creo que se puede ignorar
         }
       });
     const mensaje={
-        from: "VetyShop Store <ozzyta@outlook.com>",
+        from: "MyCarShop Store <juandavid_v3@hotmail.com>",
         to: options.email,
         subject: options.subject,
         text: options.mensaje
