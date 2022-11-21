@@ -244,4 +244,4 @@ function verProductoPorID(id) {
         .catch(err => console.error(err))
 }
 
-//verProductoPorID('63456a8d9163cb9dbbcaa235'); Probamos el metodo con un id
+//verProductoPorID('6358b03830de5eec305e87af'); Probamos el metodo con un id
