@@ -7,8 +7,8 @@
     "start": "node back/server.js",
     "dev": "set NODE_ENV=DEVELOPMENT& nodemon back/server",
     "prod": "set NODE_ENV=PRODUCTION& nodemon back/server",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false && NODE_OPTIONS=--openssl-legacy-provider && npm install --force --prefix front && npm run build --prefix front"
-  }, 
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && NODE_OPTIONS=--openssl-legacy-provider && npm install --force --prefix front && npm run build --prefix front"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Afrolady/AfroShop.git"
@@ -30,6 +30,7 @@
     "jsonwebtoken": "^8.5.1",
     "mdbreact": "^5.2.0",
     "mongoose": "^6.6.5",
+    "node": "^16.17.1",
     "node-fetch": "^3.2.10",
     "nodemailer": "^6.8.0",
     "rc-slider": "^10.0.1",
